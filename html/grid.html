@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sample Layout 1</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .header {
+      background: #f5e2d3;
+      padding: 10px;
+      font-weight: bold;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto 1fr;  /* search row + full content row */
+      flex: 1;
+    }
+    .search {
+      background: cyan;
+      grid-column: 1 / span 2;
+      padding: 10px;
+    }
+    .right {
+      background: lime;
+      grid-column: 3;
+      grid-row: 1 / span 2;  /* spans both rows */
+      padding: 10px;
+    }
+    .left {
+      background: blue;
+      color: white;
+      padding: 10px;
+      grid-row: 2;
+      grid-column: 1;
+    }
+    .middle {
+      background: yellow;
+      padding: 10px;
+      grid-row: 2;
+      grid-column: 2;
+    }
+  </style>
+</head>
+<body>
+  <h2>Sample Layout 1</h2>
+  <div class="header">HEADER</div>
+  <div class="container">
+    <div class="search">SEARCH</div>
+    <div class="right">RIGHT SIDE BAR</div>
+    <div class="left">LEFT SIDE BAR</div>
+    <div class="middle">MIDDLE</div>
+  </div>
+</body>
+</html>

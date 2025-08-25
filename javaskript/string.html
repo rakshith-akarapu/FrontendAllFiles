@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let name = "Welcome";
+        console.log("Given name:" + name);
+        console.log("char at 3rd position using at():" + name.at(2));
+        console.log("char at 3rd position using charAt():" + name.charAt(2));
+        console.log("char at 3rd position charcode using charCodeAt():" 
+                        + name.charCodeAt(2));
+        let x = "    Hai    ";
+        console.log("given x using trim():" + x.trim());
+        
+        
+        let fname = "Raja";
+        let lname = " Sekhar";
+        let surname = "Madala.";
+        
+        let fullname = surname.concat(fname).concat(lname);
+        console.log("Fullname:" + fullname);
+
+        console.log("To upper:" + name.toUpperCase());
+
+        console.log("To lower:" + name.toLowerCase());
+
+        let a = new String("Hai");
+        let b = new String("Hai");
+        console.log("Comparison of a and b using == operator:" + (a == b)) 
+        console.log("Comparison of a and b using === operator:" + (a === b)) 
+       
+
+        let n="welcome";
+        let chars= n.split("");
+        console.log("First character in chars arrays:" +chars[3]);
+        for(i of chars ){
+            console.log(i+" ")
+        }
+
+       
+
+        let p ="This is a JavaScript Book";
+        console.log("Slice:" +p.slice(10,20));
+        console.log("Slice:"+p.slice(-11,-5));
+        console.log("substring: "+p.substring(-10,5));
+        
+        console.log("replace" + );
+
+
+
+
+    </script>
+</body>
+</html>

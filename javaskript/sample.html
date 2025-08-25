@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <p id="inside"></p>
+  <p id="outside"></p>
+  
+  <script>
+    let x = 200;
+    let y = 'kaja';   // ✅ fixed
+
+    {
+      let x = 20;   // block scope
+      document.getElementById('inside').innerHTML = "Inside block: " + x;
+      console.log("inside " + x);
+    }
+
+    document.getElementById('outside').innerHTML = "Outside block: " + x;
+    console.log("outside " + x);
+  </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scope Example</title>
+</head>
+<body>
+  <h2>Explanation of Variables</h2>
+  <p id="demo"></p>
+  <script>
+    let x = 200;         // (1) global variable
+    const y = "Raja";    // (2) global constant
+
+    x = 400;             // (3) change global x → now x = 400
+
+    {
+      const x = 300;     // (4) block variable (only inside {})
+      const y = "Rani";  // (5) block constant (only inside {})
+      // these disappear after block ends
+    }
+
+    document.getElementById("demo").innerHTML = 
+       x + "<br>" + y + "<br>Type of y:" + typeof y;
+
+    console.log("value of x:" + x); 
+    console.log("value of y:" + y);
+    console.log("type of x:" + typeof x); 
+  </script>
+</body>
+</html> -->
